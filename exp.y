@@ -3,11 +3,17 @@
 #include <string.h>
 %}
 
-%token RESULT_NUMBER
+%token RESULT_NUMBER EXIT
 
 %%
 commands: /* empty */
-        | commands print_number
+        | commands command
+        ;
+
+command: 
+        print_number
+        |
+        exit
         ;
 
 print_number:
@@ -16,6 +22,13 @@ print_number:
                 printf("\tExp number readed\n");
         }
         ;
+exit:
+    EXIT
+    {
+      printf("\tExit....\n");
+      exit(1);
+    }
+    ;
 %%
 void yyerror(const char *str)
 {

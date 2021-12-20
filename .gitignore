@@ -3,4 +3,4 @@
 *.out
 out/
 lex.yy.c
-y.*.h
+y.tab.*

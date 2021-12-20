@@ -5,6 +5,5 @@
 
 %%
 \d+([.]\d+)?((E|e)-\d+)?   return RESULT_NUMBER;
-[ \t]+                        /* ignore */;
-\n                            /* ignore */;
+exit                       return EXIT;
 %%
