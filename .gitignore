@@ -1,0 +1,6 @@
+.idea
+.vscode
+*.out
+out/
+lex.yy.c
+y.*.h
