@@ -26,7 +26,7 @@ command:
 print_number:
         RESULT_NUMBER
         {
-                printf("\tExp number readed: %f\n", $1);
+                printf("\tExp number read: %f\n", $1);
         }
         ;
 exit:
