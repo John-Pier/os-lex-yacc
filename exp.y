@@ -1,9 +1,17 @@
 %{
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 %}
 
-%token RESULT_NUMBER EXIT
+%token EXIT
+
+%union {
+  double value;
+  char* str_value;
+}
+
+%token <value> RESULT_NUMBER
 
 %%
 commands: /* empty */
@@ -19,7 +27,7 @@ command:
 print_number:
         RESULT_NUMBER
         {
-                printf("\tExp number readed\n");
+                printf("\tExp number readed: %f\n", $1);
         }
         ;
 exit:
@@ -30,6 +38,7 @@ exit:
     }
     ;
 %%
+
 void yyerror(const char *str)
 {
   fprintf(stderr,"Error: %s\n", str);

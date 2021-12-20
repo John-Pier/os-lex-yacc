@@ -12,4 +12,4 @@
 
 1. yacc -d exp.y
 2. lex exp.l
-3. cc lex.yy.c y.tab.c -o result
+3. cc lex.yy.c y.tab.c -o result.out
