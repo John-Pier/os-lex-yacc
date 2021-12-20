@@ -8,7 +8,6 @@
 
 %union {
   double value;
-  char* str_value;
 }
 
 %token <value> RESULT_NUMBER
