@@ -9,6 +9,7 @@
 *1.23E–02*
 
 ### Commands
+For start run `bash start.bash` in terminal
 
 1. yacc -d exp.y
 2. lex exp.l
